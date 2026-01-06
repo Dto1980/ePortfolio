@@ -14,19 +14,19 @@
         (function () {
             emailjs.init({
                 PublicKey: "qVcJseSvzNeuqXfKY",
-            });          
+            });
         })();
     </script>
 </head>
 
 <body>
-    <section id="landing-page">
+    <section id="landing-page" onmousemove="moveBackground(event)">
         <nav>
             <figure>
                 <img id="personal-logo" src="./assets/DTO Logo.png" alt="">
             </figure>
             <ul class="nav__link--list">
-                <li class="nav__link click">
+                <li class="nav__link click" onclick="toggleModal()">
                     <a href="#" class="
                             nav__link--anchor
                             link__hover-effect
@@ -35,7 +35,7 @@
 
                 </li>
                 <li class="nav__link click">
-                    <a href="#" class="
+                    <a href="#projects" class="
                             nav__link--anchor
                             link__hover-effect
                             link__hover-effect__black
@@ -63,7 +63,7 @@
             <div class="header__content">
                 <h1 class="title">Hey</h1>
                 <h1 class="title title--secondary"><b class="orange">I'm Dane.</b></h1>
-                <p class="header-para">
+                <p class="header__para">
                     I'm a <b class="orange">Frontend Software Engineer </b>with a strong passion for building web
                     applications with great user
                     experiences.
@@ -83,9 +83,11 @@
                 </div>
             </div>
         </header>
-        <button class="mail__btn click" onclick="toggleModal()">
-            <i class="fas fa-envelope"></i>
-        </button>
+        <a href="#">
+            <button class="mail__btn click" onclick="toggleModal()">
+                <i class="fas fa-envelope"></i>
+            </button>
+        </a>
         <a href="#projects" class="scroll">
             <div class="scroll__icon click"></div>
         </a>
@@ -129,15 +131,15 @@
                 <form id="contact__form" onsubmit="contact(event)">
                     <div class="form__item">
                         <label class="form__item--label">Name</label>
-                        <input class="input" name="user_name" type="text" ></input>
+                        <input class="input" name="user_name" type="text"></input>
                     </div>
                     <div class="form__item">
                         <label class="form__item--label">Email</label>
-                        <input class="input" name="user_email" type="email" ></input>
+                        <input class="input" name="user_email" type="email"></input>
                     </div>
                     <div class="form__item">
                         <label class="form__item--label">Message</label>
-                        <textarea class="input" name="message" type="text" ></textarea>
+                        <textarea class="input" name="message" type="text"></textarea>
                     </div>
                     <button id="contact__submit" class="form__submit">
                         Send it my way
@@ -150,10 +152,16 @@
                     Thanks for the message! I'll be in touch soon.
                 </div>
             </div>
-            <div>
-                
-            </div>
         </div>
+        <img src="./assets/semi circle.svg" class="shape shape--0">
+        <img src="./assets/circle.svg" class="shape shape--1">
+        <img src="./assets/squiggly.svg" class="shape shape--2">
+        <img src="./assets/circle.svg" class="shape shape--3">
+        <img src="./assets/triangle.svg" class="shape shape--4">
+        <img src="./assets/circle.svg" class="shape shape--5">
+        <img src="./assets/squiggly.svg" class="shape shape--6">
+        <img src="./assets/circle.svg" class="shape shape--7">
+        <img src="./assets/semi circle.svg" class="shape shape--8">
     </section>
     <section id="projects">
         <div class="container">
@@ -234,31 +242,34 @@
                     <img class="footer__logo--img" src="./assets/DTO Logo.png" alt="">
                 </figure>
                 <div class="footer__social--list">
-                    <a href="#" class="footer__social--link
+                    <a href="#" target="_blank" class="
+                    footer__social--link
                     link__hover-effect 
                     link__hover-effect__white
                         ">
                         GitHub
                     </a>
-                    <a href="#" class="footer__social--link
+                    <a href="#" target="_blank" class="
+                    footer__social--link
                     link__hover-effect 
                     link__hover-effect__white
                     ">
                         LinkedIn
                     </a>
-                    <a href="#" class="footer__social--link
+                    <a href="#" onclick="toggleModal()" class="
+                    footer__social--link
                     link__hover-effect 
                      link__hover-effect__white
-                     " onclick="toggleModal()">
+                     ">
                         Contact
                     </a>
-                    <a href="#" class="footer__social--link
+                    <a href="./assets/Dane Olsen- Resume.pdf" target="_blank" class="
+                    footer__social--link
                      link__hover-effect 
                      link__hover-effect__white
                     ">
                         Resume
                     </a>
-
                 </div>
                 <div class="footer__copyright">Copyright © 2025 Dane Olsen</div>
             </div>
